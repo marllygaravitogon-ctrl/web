@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ED FÍSICA</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Baloo 2', cursive;
+        background: linear-gradient(135deg, #f5f9e9, #d4f0fc);
+        color: #1e3d3b;
+        line-height: 1.7;
+    }
+
+    /* Navbar */
+    nav {
+        background-color: #2c6e49;
+        text-align: center;
+        padding: 12px 0;
+        box-shadow: 0 4px 8px rgba(44, 110, 73, 0.4);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: 600;
+        padding: 10px 18px;
+        border-radius: 8px;
+        background-color: #3d8b6c;
+        transition: all 0.3s;
+        display: inline-block;
+    }
+
+    nav a:hover {
+        background-color: #56a3a6;
+        transform: scale(1.1);
+    }
+
+    /* Contenedor principal */
+    .contenido {
+        max-width: 900px;
+        margin: 50px auto 80px;
+        background-color: #ffffffd0;
+        padding: 40px 50px;
+        border-radius: 30px;
+        box-shadow: 0 10px 25px rgba(28, 103, 88, 0.3);
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Comic Neue', cursive;
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: #2b6e91;
+        margin-bottom: 20px;
+        letter-spacing: 0.05em;
+        text-shadow: 2px 2px #a7d7c5;
+    }
+
+    table {
+        margin: 30px auto;
+        border-collapse: collapse;
+        width: 95%;
+        max-width: 1000px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #c9e7e4;
+        text-align: center;
+    }
+
+    th {
+        background-color: #3d8b6c;
+        color: white;
+        font-size: 1.1em;
+    }
+
+    td {
+        background-color: #ffffffd0;
+        color: #2d5f4a;
+        font-size: 0.95em;
+    }
+
+    tr:hover td {
+        background-color: #d4f0fc;
+        transform: scale(1.02);
+        transition: all 0.3s;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-top: 30px;
+        color: #2a4d44;
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+
+    @media (max-width: 600px) {
+        .contenido {
+            padding: 20px 15px;
+            margin: 20px;
+        }
+        h1 { font-size: 2rem; }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="PRINCIPAL.html">PRINCIPAL</a>
+    <a href="INFORMATICA.html">INFORMÁTICA</a>
+    <a href="MATEMATICAS.html">MATEMÁTICAS</a>
+    <a href="ED-AMBIENTAL.html">ED. AMBIENTAL</a>
+    <a href="ED-FISICA.html">ED. FÍSICA</a>
+    <a href="INGLES.html">INGLÉS</a>
+    <a href="ESPAÑOL.html">ESPAÑOL</a>
+    <a href="BIOLOGIA.html">BIOLOGÍA</a>
+    <a href="SOCIALES.html">SOCIALES</a>
+</nav>
+
+<div class="contenido">
+    <h1>ED FÍSICA - Clima de Montaña</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Frecuencia Cardíaca (FC) bpm</th>
+                <th>Frecuencia Respiratoria (FR) rpm</th>
+                <th>Percepción de Dolor/Fatiga (0-10)</th>
+                <th>Temperatura Corporal (°C)</th>
+                <th>Sudoración (leve/moderada/alta)</th>
+                <th>Peso (kg)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>85</td><td>12</td><td>0</td><td>36.7</td><td>leve</td><td>68</td></tr>
+            <tr><td>2</td><td>88</td><td>14</td><td>1</td><td>36.9</td><td>leve</td><td>70</td></tr>
+            <tr><td>3</td><td>90</td><td>13</td><td>2</td><td>37.0</td><td>moderada</td><td>65</td></tr>
+            <tr><td>4</td><td>92</td><td>15</td><td>3</td><td>37.2</td><td>moderada</td><td>72</td></tr>
+            <tr><td>5</td><td>95</td><td>16</td><td>4</td><td>37.3</td><td>alta</td><td>68</td></tr>
+            <tr><td>6</td><td>97</td><td>17</td><td>5</td><td>37.4</td><td>alta</td><td>66</td></tr>
+            <tr><td>7</td><td>100</td><td>18</td><td>6</td><td>37.5</td><td>alta</td><td>69</td></tr>
+            <tr><td>8</td><td>102</td><td>19</td><td>7</td><td>37.6</td><td>alta</td><td>71</td></tr>
+            <tr><td>9</td><td>105</td><td>20</td><td>8</td><td>37.8</td><td>alta</td><td>70</td></tr>
+            <tr><td>10</td><td>108</td><td>21</td><td>9</td><td>37.9</td><td>alta</td><td>69</td></tr>
+        </tbody>
+    </table>
+
+    <p>En esta actividad recreamos un clima de montaña usando elementos como tapabocas (la chaqueta del uniforme) para simular la sensación de asfixia por el aire más denso. Además, se utilizó una maleta para simular la dificultad de caminar en este ambiente y se colocaron obstáculos como cuerdas, aros y otros elementos para saltar y esquivar, simulando el terreno irregular de la montaña o la selva.</p>
+
+</div>
+
+</body>
+</html>
+

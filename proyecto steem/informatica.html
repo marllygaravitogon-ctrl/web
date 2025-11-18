@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>INFORMATICA</title>
+    <!-- Fuentes con estilo infantil -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Baloo+2:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset y base */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Baloo 2', cursive;
+            background: linear-gradient(135deg, #f5f9e9, #d4f0fc);
+            color: #1e3d3b;
+            line-height: 1.7;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #2c6e49;
+            text-align: center;
+            padding: 12px 0;
+            box-shadow: 0 4px 8px rgba(44, 110, 73, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-family: 'Baloo 2', cursive;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background-color: #3d8b6c;
+            transition: all 0.3s;
+            display: inline-block;
+            letter-spacing: 0.04em;
+        }
+
+        nav a:hover {
+            background-color: #56a3a6;
+            transform: scale(1.1);
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto 80px;
+            background-color: #ffffffd0;
+            padding: 40px 50px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(28, 103, 88, 0.3);
+            text-align: center;
+            transition: box-shadow 0.4s ease;
+        }
+
+        .contenido:hover {
+            box-shadow: 0 15px 45px rgba(28, 103, 88, 0.5);
+        }
+
+        /* Barras decorativas */
+        .contenido::before,
+        .contenido::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 14px;
+            height: 100%;
+            border-radius: 14px;
+            background: linear-gradient(180deg, #2c6e49 0%, #56a3a6 100%);
+            box-shadow: 0 0 15px rgba(44, 110, 73, 0.4);
+        }
+        .contenido::before { left: -20px; }
+        .contenido::after { right: -20px; }
+
+        /* Títulos con letra infantil */
+        h1 {
+            font-family: 'Comic Neue', cursive;
+            font-weight: 700;
+            font-size: 3rem;
+            color: #2b6e91;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-shadow: 2px 2px #a7d7c5;
+        }
+
+        h2 {
+            font-family: 'Comic Neue', cursive;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #1c6758;
+            margin: 40px 0 15px;
+            text-shadow: 1px 1px #a8e6cf;
+        }
+
+        /* Texto */
+        p {
+            font-size: 1.25em;
+            max-width: 850px;
+            margin: 0 auto 30px;
+            color: #2a4d44;
+        }
+
+        /* Listas */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto 40px;
+            max-width: 350px;
+            text-align: left;
+        }
+
+        li {
+            font-size: 1.2em;
+            padding: 10px 0;
+            border-bottom: 2px dashed #c9e7e4;
+            color: #2d5f4a;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        li:hover {
+            color: #145374;
+            transform: scale(1.05);
+        }
+
+        /* Imágenes */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 5px solid #2c6e49;
+            box-shadow: 0 10px 20px rgba(44, 110, 73, 0.4);
+            margin: 40px auto;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(44, 110, 73, 0.6);
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            .contenido {
+                padding: 20px 15px;
+                margin: 20px;
+            }
+            h1 { font-size: 2.3rem; }
+            h2 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="PRINCIPAL.html">PRINCIPAL</a>
+        <a href="INFORMATICA.html">INFORMÁTICA</a>
+        <a href="MATEMATICAS.html">MATEMÁTICAS</a>
+        <a href="ED-AMBIENTAL.html">ED. AMBIENTAL</a>
+        <a href="ED-FISICA.html">ED. FÍSICA</a>
+        <a href="INGLES.html">INGLÉS</a>
+        <a href="ESPAÑOL.html">ESPAÑOL</a>
+        <a href="BIOLOGIA.html">BIOLOGÍA</a>
+        <a href="SOCIALES.html">SOCIALES</a>
+    </nav>
+
+    <div class="contenido">
+        <h1> informática .</p>
+
+        <img src="https://img.freepik.com/vector-premium/ilustracion-concepto-computadora-escritorio_114360-12153.jpg">
+
+        <h2>hemos hecho una paguina para tener como prueba lo que hemos hecho en las demas materias</h2>
+     
+        <img src="https://images.vexels.com/media/users/3/202262/isolated/preview/fda4845594941dfc5ada0e952cc3021d-ilustracion-de-la-planta-de-potus.png">
+
+          </div>
+
+</body>
+</html>

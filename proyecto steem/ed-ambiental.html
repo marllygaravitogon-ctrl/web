@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>ED-AMBIENTAL</title>
+    <!-- Fuentes con estilo infantil -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Baloo+2:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset y base */
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Baloo 2', cursive;
+            background: linear-gradient(135deg, #f5f9e9, #d4f0fc);
+            color: #1e3d3b;
+            line-height: 1.7;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #2c6e49;
+            text-align: center;
+            padding: 12px 0;
+            box-shadow: 0 4px 8px rgba(44, 110, 73, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-family: 'Baloo 2', cursive;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background-color: #3d8b6c;
+            transition: all 0.3s;
+            display: inline-block;
+            letter-spacing: 0.04em;
+        }
+        nav a:hover {
+            background-color: #56a3a6;
+            transform: scale(1.1);
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto 80px;
+            background-color: #ffffffd0;
+            padding: 40px 50px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(28, 103, 88, 0.3);
+            text-align: center;
+            transition: box-shadow 0.4s ease;
+        }
+        .contenido:hover { box-shadow: 0 15px 45px rgba(28, 103, 88, 0.5); }
+
+        /* Barras decorativas */
+        .contenido::before,
+        .contenido::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 14px;
+            height: 100%;
+            border-radius: 14px;
+            background: linear-gradient(180deg, #2c6e49 0%, #56a3a6 100%);
+            box-shadow: 0 0 15px rgba(44, 110, 73, 0.4);
+        }
+        .contenido::before { left: -20px; }
+        .contenido::after { right: -20px; }
+
+        /* Títulos */
+        h1 {
+            font-family: 'Comic Neue', cursive;
+            font-weight: 700;
+            font-size: 3rem;
+            color: #2b6e91;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-shadow: 2px 2px #a7d7c5;
+        }
+        h2 {
+            font-family: 'Comic Neue', cursive;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #1c6758;
+            margin: 40px 0 15px;
+            text-shadow: 1px 1px #a8e6cf;
+        }
+
+        /* Texto */
+        p {
+            font-size: 1.25em;
+            max-width: 850px;
+            margin: 0 auto 30px;
+            color: #2a4d44;
+        }
+
+        /* Listas */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto 40px;
+            max-width: 350px;
+            text-align: left;
+        }
+        li {
+            font-size: 1.2em;
+            padding: 10px 0;
+            border-bottom: 2px dashed #c9e7e4;
+            color: #2d5f4a;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        li:hover { color: #145374; transform: scale(1.05); }
+
+        /* Galería con botones */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .gallery-item {
+            text-align: center;
+        }
+        .gallery a img {
+            width: 250px;
+            height: auto;
+            border-radius: 20px;
+            border: 5px solid #2c6e49;
+            box-shadow: 0 10px 20px rgba(44, 110, 73, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery a img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 15px 40px rgba(44, 110, 73, 0.6);
+        }
+
+        /* Botones de volver a principal */
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #3d8b6c;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background-color: #56a3a6;
+            transform: scale(1.1);
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            .contenido { padding: 20px 15px; margin: 20px; }
+            h1 { font-size: 2.3rem; }
+            h2 { font-size: 1.7rem; }
+            .gallery a img { width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="PRINCIPAL.html">PRINCIPAL</a>
+        <a href="INFORMATICA.html">INFORMÁTICA</a>
+        <a href="MATEMATICAS.html">MATEMÁTICAS</a>
+        <a href="ED-AMBIENTAL.html">ED. AMBIENTAL</a>
+        <a href="ED-FISICA.html">ED. FÍSICA</a>
+        <a href="INGLES.html">INGLÉS</a>
+        <a href="ESPAÑOL.html">ESPAÑOL</a>
+        <a href="BIOLOGIA.html">BIOLOGÍA</a>
+        <a href="SOCIALES.html">SOCIALES</a>
+    </nav>
+<p>buenos dias, tardes o noches profe para decirle que acosta no sale en el noticiero ya que no pudimos encontrarnos pero en general si esta en el grupo steem</p>
+
+    <div class="contenido">
+        <h1>ED AMBIENTAL</h1>
+        <p>La paleoclimatología estudia cómo era el clima de la Tierra hace muchos años.  
+        Gracias a los fósiles, los anillos de los árboles y el hielo de los glaciares, los científicos descubren cómo cambiaba el clima a través del tiempo.  
+        Así aprendemos más sobre nuestro planeta y cómo cuidarlo mejor.</p>
+<h1>ACTIVIDAD 1</h1>
+<p>En esta actividad buscamos un artículo científico.</p>
+<p>Aquí te dejo el link de nuestro artículo:</p>
+<a href="https://drive.google.com/file/d/1wWmE-7GzaGlVXZ7bMZh9Dme1QwyayNqe/view?usp=drive_link" target="_blank" class="btn">Abrir Artículo</a>
+
+  <h1>ACTIVIDAD 2</h1>
+<p>en esta actividad hicimos un laoratorio con una muestra de hielo</p>
+<p>aqui te dejo la imagenes de nuestro laboratorio</p>
+
+         <h1>Galería de Imágenes con Enlaces</h1>
+    <div class="gallery">
+        <!-- Cada imagen apunta a un enlace diferente -->
+        <a href="https://drive.google.com/file/d/13jQBd8TG_3jAvrFalY-o1USMlsPkVCjY/view?usp=drive_link" target="_blank">
+            <img src="images/1000080169.jpg" alt="Imagen 1">
+        </a>
+        <a href="https://drive.google.com/file/d/1ji9i8UnFD_JfZntVNPnvEfYuWaCefPwc/view?usp=drive_link" target="_blank">
+            <img src="images/1000080172.jpg" alt="Imagen 2">
+        </a>
+        <a href="https://drive.google.com/file/d/1VjZYDsIf7-CmE0YLXZwBRtVtStRGxFbU/view?usp=drive_link" target="_blank">
+            <img src="images/1000080173.jpg" alt="Imagen 3">
+        </a>
+        <a href="https://drive.google.com/file/d/1qMsXqOb0cq1AIdBnsMg8DArJgVFCwato/view?usp=drive_link
+" target="_blank">
+            <img src="images/1000080174.jpg" alt="Imagen 4">
+        </a>
+    </div>
+
+   <h1>ACTIVIDAD 2</h1>
+<p>en esta actividad hicimos un noticiero sobre el documento </p>
+<h2>noticiero</h2>
+
+<a href="https://youtu.be/db0Ol3cQHto?si=w2gMWmTVxa5z9SW7"
+   target="_blank"
+   style="
+        display:inline-block;
+        padding:12px 22px;
+        background:#3d8b6c;
+        color:white;
+        border-radius:12px;
+        text-decoration:none;
+        font-weight:600;
+        margin-top:10px;
+        transition:0.3s;
+   "
+   onmouseover="this.style.background='#56a3a6'"
+   onmouseout="this.style.background='#3d8b6c'">
+    🎬 Ver noticiero
+
+
+
+
+
+</body>
+</html>

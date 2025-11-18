@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego - Línea de Tiempo Cartagena</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e3f5e2, #d0f0ff);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1c6758;
+            margin-top: 30px;
+            font-size: 2.5rem;
+        }
+
+        /* Tarjetas */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 18px;
+            margin: 12px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            cursor: grab;
+            font-size: 1.2rem;
+        }
+
+        /* Área donde se sueltan */
+        .dropzone {
+            background: #c0e8d5;
+            padding: 25px;
+            border-radius: 15px;
+            border: 3px dashed #2c6e49;
+            min-height: 200px;
+            margin-top: 30px;
+        }
+
+        #mensaje {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Botón volver */
+        .btn-volver {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 14px 26px;
+            background: #2c6e49;
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .btn-volver:hover {
+            background: #56a3a6;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Juego: Ordena la Línea del Tiempo de Cartagena</h1>
+
+    <div class="container">
+
+        <h3>Arrastra los eventos hacia la línea del tiempo en el orden correcto</h3>
+
+        <!-- TARJETAS -->
+        <div id="tarjetas">
+            <div class="card" draggable="true" id="c1920">1920 — Clima estable, pesca y manglares abundantes.</div>
+            <div class="card" draggable="true" id="c1950">1950-1960 — Industrialización, tala y cambios en lluvias.</div>
+            <div class="card" draggable="true" id="c1980">1980-1990 — Inundaciones y aumento del nivel del mar.</div>
+            <div class="card" draggable="true" id="c2000">2000-2020 — Mareas altas inundan el centro y corales blanqueados.</div>
+            <div class="card" draggable="true" id="c2025">2025 — Temperaturas superiores a 30°C y huracanes fuertes.</div>
+        </div>
+
+        <!-- ZONA DONDE SE SUELTAN -->
+        <div class="dropzone" id="lineaTiempo">
+            <p>Arrastra aquí los eventos en orden del más antiguo al más reciente</p>
+        </div>
+
+        <div id="mensaje"></div>
+
+        <!-- BOTÓN VOLVER -->
+        <a href="ESPAÑOL.html" class="btn-volver">⬅ Volver a la página principal</a>
+
+    </div>
+
+    <script>
+        const tarjetas = document.querySelectorAll(".card");
+        const zona = document.getElementById("lineaTiempo");
+        const mensaje = document.getElementById("mensaje");
+
+        let ordenCorrecto = ["c1920","c1950","c1980","c2000","c2025"];
+        let ordenUsuario = [];
+
+        tarjetas.forEach(card => {
+            card.addEventListener("dragstart", e => {
+                e.dataTransfer.setData("id", e.target.id);
+            });
+        });
+
+        zona.addEventListener("dragover", e => {
+            e.preventDefault();
+            zona.style.background = "#a8dbc1";
+        });
+
+        zona.addEventListener("dragleave", () => {
+            zona.style.background = "#c0e8d5";
+        });
+
+        zona.addEventListener("drop", e => {
+            let id = e.dataTransfer.getData("id");
+            let elemento = document.getElementById(id);
+
+            if (!ordenUsuario.includes(id)) {
+                zona.appendChild(elemento);
+                ordenUsuario.push(id);
+            }
+
+            zona.style.background = "#c0e8d5";
+
+            if (ordenUsuario.length === ordenCorrecto.length) {
+                evaluar();
+            }
+        });
+
+        function evaluar() {
+            if (JSON.stringify(ordenCorrecto) === JSON.stringify(ordenUsuario)) {
+                mensaje.style.color = "green";
+                mensaje.textContent = "¡Correcto! Ordenaste la línea del tiempo perfectamente 🎉";
+            } else {
+                mensaje.style.color = "red";
+                mensaje.textContent = "Algunos eventos están fuera de orden. Intenta de nuevo.";
+            }
+        }
+    </script>
+
+</body>
+</html>

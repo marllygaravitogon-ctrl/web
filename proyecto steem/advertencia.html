@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Advertencia — Riesgos Ambientales</title>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Baloo 2', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg,#fff7f0,#f0f8ff);
+        }
+
+        header {
+            background: #b33a3a;
+            color: white;
+            padding: 18px;
+            text-align: center;
+            font-size: 1.9rem;
+        }
+
+        .contenedor {
+            max-width: 920px;
+            margin: 28px auto;
+            padding: 18px;
+        }
+
+        .alerta {
+            background: linear-gradient(180deg,#ffecec,#fff1f1);
+            border-left: 8px solid #b33a3a;
+            padding: 18px;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(179,58,58,0.15);
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+        }
+
+        .texto {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .imagen {
+            width: 100%;
+            border-radius: 14px;
+            margin: 18px 0;
+            display: block;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .lista-riesgos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .riesgo {
+            background: #fff8e6;
+            border-radius: 12px;
+            padding: 12px;
+            border-left: 6px solid #f08a24;
+            box-shadow: 0 3px 10px rgba(240,138,36,0.08);
+        }
+
+        .botones {
+            margin-top: 22px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.25s;
+        }
+
+        .btn-volver { background: #6b7280; }
+        .btn-accion { background: #2b7a78; }
+        .btn-volver:hover { transform: translateY(-3px); opacity: 0.95; }
+        .btn-accion:hover { transform: translateY(-3px); opacity: 0.95; }
+
+        footer {
+            margin-top: 28px;
+            text-align: center;
+            color: #6b6b6b;
+            font-size: 0.95rem;
+        }
+
+        /* Estilo del área para escribir */
+        textarea {
+            width: 100%;
+            height: 160px;
+            border-radius: 12px;
+            border: 3px solid #b33a3a;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-family: 'Baloo 2', cursive;
+            background: #fff7f7;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            resize: none;
+            margin-top: 20px;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #d35a5a;
+            background: white;
+        }
+
+        @media (max-width: 600px) {
+            header { font-size: 1.5rem; padding: 14px; }
+            .contenedor { padding: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        ⚠️ Advertencia — Riesgos para Cartagena
+    </header>
+
+    <div class="contenedor">
+
+        <div class="alerta">
+            Las acciones pasadas (tala de manglares, desarrollo costero sin planificación) han incrementado la vulnerabilidad frente a huracanes, subida del nivel del mar e inundaciones. Es urgente informarse y actuar.
+        </div>
+
+        <img class="https://thumbs.dreamstime.com/b/desastre-natural-de-tormenta-lluvia-dibujos-animados-rel%C3%A1mpago-y-nubes-inundaron-casas-destruidas-cataclismo-extremo-lluvioso-264316023.jpg">
+
+        <div class="texto">
+            <strong>Situación actual:</strong>
+            <p>
+                El aumento del nivel del mar, la erosión de playas y la pérdida de manglares han hecho que las mareas altas y las lluvias intensas provoquen inundaciones más frecuentes en barrios costeros. Los ecosistemas marinos también sufren por el blanqueamiento y la contaminación. Las comunidades que viven cerca de la costa son las más afectadas.
+            </p>
+
+            <div class="lista-riesgos">
+                <div class="riesgo">
+                    <strong>Niveles del mar</strong>
+                    <p>Subida gradual que erosiona playas y deja infraestructuras en riesgo.</p>
+                </div>
+                <div class="riesgo">
+                    <strong>Inundaciones</strong>
+                    <p>Mareas altas e intensas lluvias provocan anegamientos en zonas bajas.</p>
+                </div>
+                <div class="riesgo">
+                    <strong>Huracanes más fuertes</strong>
+                    <p>Eventos con mayor energía e impacto en viviendas y servicios.</p>
+                </div>
+                <div class="riesgo">
+                    <strong>Pérdida de manglares</strong>
+                    <p>Disminuye la barrera natural que protege la costa y la biodiversidad.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top:16px;">Consecuencias a corto y largo plazo</h3>
+            <p>
+                A corto plazo: daños a viviendas, calles inundadas y pérdida temporal de servicios.  
+                A largo plazo: desplazamiento de familias, pérdida de medios de vida pesqueros y reducción de la biodiversidad.
+            </p>
+        </div>
+
+        <img class="https://img.freepik.com/vector-gratis/gente-asustadiza-que-ahoga-agua-aislada-ilustracion-vectorial-plana-dibujos-animados-casas-sumergidas-coche-ahogado-inundaciones-o-tsunamis_74855-8570.jpg?semt=ais_hybrid&w=740&q=80">
+
+        <div class="texto" style="margin-top:16px;">
+            <strong>¿Qué puedes hacer ahora?</strong>
+            <ul>
+                <li>Informarte sobre zonas seguras y planes de evacuación.</li>
+                <li>Participar en jornadas de reforestación de manglares.</li>
+                <li>Apoyar iniciativas locales que reduzcan la contaminación.</li>
+                <li>Exigir políticas públicas que regulen el desarrollo costero.</li>
+            </ul>
+        </div>
+
+        <!-- 📝 ÁREA PARA ESCRIBIR -->
+        <h2 style="margin-top:25px;">📝escribe una solucion para este final</h2>
+
+        <textarea id="notasAdvertencia" placeholder="Escribe tus observaciones o reflexiones aquí..."></textarea>
+
+        <div style="margin-top:10px; display:flex; gap:12px; flex-wrap:wrap;">
+            <button onclick="guardarNotasAdvertencia()" style="background:#b33a3a;color:white;padding:10px 18px;border-radius:10px;border:none;cursor:pointer;font-family:'Baloo 2';">💾 Guardar notas</button>
+
+            <button onclick="borrarNotasAdvertencia()" style="background:#6b7280;color:white;padding:10px 18px;border-radius:10px;border:none;cursor:pointer;font-family:'Baloo 2';">🗑️ Borrar todo</button>
+        </div>
+
+        <div class="botones">
+            <a class="btn btn-volver" href="ESPAÑOL.html">⬅ Volver a español</a>
+        </div>
+
+        <footer>
+            Información educativa — comparte y conversa con tu comunidad.
+        </footer>
+
+    </div>
+
+    <!-- Script para guardar notas -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('notasAdvertencia').value =
+                localStorage.getItem('notasAdvertencia') || '';
+        });
+
+        function guardarNotasAdvertencia() {
+            localStorage.setItem('notasAdvertencia',
+                document.getElementById('notasAdvertencia').value);
+            alert('Notas guardadas correctamente');
+        }
+
+        function borrarNotasAdvertencia() {
+            if (confirm('¿Seguro que quieres borrar todas tus notas?')) {
+                localStorage.removeItem('notasAdvertencia');
+                document.getElementById('notasAdvertencia').value = '';
+            }
+        }
+    </script>
+
+</body>
+</html>

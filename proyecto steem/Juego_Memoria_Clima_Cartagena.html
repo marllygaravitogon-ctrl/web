@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Memoria - Cartagena y el Clima</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #b8e6ff, #d5ffd8);
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #145374;
+            font-size: 2.5rem;
+        }
+
+        #tablero {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+        }
+
+        .carta {
+            background: white;
+            height: 120px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .carta.volteada {
+            background: #4b9aaa;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        #mensaje {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #145374;
+        }
+
+        /* Botón volver */
+        .btn-volver {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 14px 26px;
+            background: #145374;
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .btn-volver:hover {
+            background: #1d7aa2;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Juego de Memoria: Clima e Historia de Cartagena</h1>
+
+    <p>Haz clic en las cartas y encuentra las parejas correctas.</p>
+
+    <div id="tablero"></div>
+
+    <div id="mensaje"></div>
+
+    <a href="ESPAÑOL.html" class="btn-volver">⬅ Volver a la página principal</a>
+
+    <script>
+        const parejas = [
+            {id: 1, text: "A comienzos del siglo XX"},
+            {id: 1, text: "Ciudad costera con clima estable y vida colonial"},
+            
+            {id: 2, text: "1920"},
+            {id: 2, text: "Economía de pesca, manglares extensos y clima de 26°C"},
+            
+            {id: 3, text: "1950-1960"},
+            {id: 3, text: "Industrialización, tala de manglares y lluvias irregulares"},
+            
+            {id: 4, text: "1980-1990"},
+            {id: 4, text: "Inundaciones, sequías y aumento del nivel del mar"},
+            
+            {id: 5, text: "2000-2020"},
+            {id: 5, text: "Mareas altas, corales blanqueados y erosión"},
+            
+            {id: 6, text: "2025"},
+            {id: 6, text: "Temperaturas de más de 30°C y huracanes frecuentes"}
+        ];
+
+        // Mezclar cartas
+        let cartas = [...parejas].sort(() => Math.random() - 0.5);
+
+        const tablero = document.getElementById("tablero");
+        const mensaje = document.getElementById("mensaje");
+
+        let seleccionadas = [];
+        let bloqueado = false;
+        let aciertos = 0;
+
+        function crearTablero() {
+            cartas.forEach((c, index) => {
+                let div = document.createElement("div");
+                div.classList.add("carta");
+                div.dataset.id = c.id;
+                div.dataset.index = index;
+                div.textContent = "❓";
+
+                div.addEventListener("click", () => voltear(div));
+
+                tablero.appendChild(div);
+            });
+        }
+
+        function voltear(carta) {
+            if (bloqueado) return;
+            if (carta.classList.contains("volteada")) return;
+
+            let index = carta.dataset.index;
+            carta.classList.add("volteada");
+            carta.textContent = cartas[index].text;
+
+            seleccionadas.push(carta);
+
+            if (seleccionadas.length === 2) {
+                verificar();
+            }
+        }
+
+        function verificar() {
+            bloqueado = true;
+
+            let [c1, c2] = seleccionadas;
+
+            if (c1.dataset.id === c2.dataset.id) {
+                aciertos++;
+                seleccionadas = [];
+                bloqueado = false;
+
+                if (aciertos === parejas.length / 2) {
+                    mensaje.textContent = "🎉 ¡Excelente! Completaste todas las parejas.";
+                }
+            } else {
+                setTimeout(() => {
+                    c1.classList.remove("volteada");
+                    c2.classList.remove("volteada");
+                    c1.textContent = "❓";
+                    c2.textContent = "❓";
+                    seleccionadas = [];
+                    bloqueado = false;
+                }, 1000);
+            }
+        }
+
+        crearTablero();
+    </script>
+
+</body>
+</html>

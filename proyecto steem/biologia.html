@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>ed-fisica</title>
+    <!-- Fuentes con estilo infantil -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Baloo+2:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Baloo 2', cursive;
+            background: linear-gradient(135deg, #f5f9e9, #d4f0fc);
+            color: #1e3d3b;
+            line-height: 1.7;
+        }
+        nav {
+            background-color: #2c6e49;
+            text-align: center;
+            padding: 12px 0;
+            box-shadow: 0 4px 8px rgba(44, 110, 73, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-family: 'Baloo 2', cursive;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background-color: #3d8b6c;
+            transition: all 0.3s;
+            display: inline-block;
+            letter-spacing: 0.04em;
+        }
+        nav a:hover {
+            background-color: #56a3a6;
+            transform: scale(1.1);
+        }
+        .contenido {
+            position: relative;
+            max-width: 900px;
+            margin: 50px auto 80px;
+            background-color: #ffffffd0;
+            padding: 40px 50px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(28, 103, 88, 0.3);
+            text-align: center;
+            transition: box-shadow 0.4s ease;
+        }
+        .contenido:hover {
+            box-shadow: 0 15px 45px rgba(28, 103, 88, 0.5);
+        }
+        .contenido::before,
+        .contenido::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 14px;
+            height: 100%;
+            border-radius: 14px;
+            background: linear-gradient(180deg, #2c6e49 0%, #56a3a6 100%);
+            box-shadow: 0 0 15px rgba(44, 110, 73, 0.4);
+        }
+        .contenido::before { left: -20px; }
+        .contenido::after { right: -20px; }
+        h1 {
+            font-family: 'Comic Neue', cursive;
+            font-weight: 700;
+            font-size: 3rem;
+            color: #2b6e91;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-shadow: 2px 2px #a7d7c5;
+        }
+        h2 {
+            font-family: 'Comic Neue', cursive;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #1c6758;
+            margin: 40px 0 15px;
+            text-shadow: 1px 1px #a8e6cf;
+        }
+        p {
+            font-size: 1.25em;
+            max-width: 850px;
+            margin: 0 auto 30px;
+            color: #2a4d44;
+        }
+        @media (max-width: 600px) {
+            .contenido { padding: 20px 15px; margin: 20px; }
+            h1 { font-size: 2.3rem; }
+            h2 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+         <a href="PRINCIPAL.html">PRINCIPAL</a>
+        <a href="INFORMATICA.html">INFORMÁTICA</a>
+        <a href="MATEMATICAS.html">MATEMÁTICAS</a>
+        <a href="ED-AMBIENTAL.html">ED. AMBIENTAL</a>
+        <a href="ED-FISICA.html">ED. FÍSICA</a>
+        <a href="INGLES.html">INGLÉS</a>
+        <a href="ESPAÑOL.html">ESPAÑOL</a>
+        <a href="BIOLOGIA.html">BIOLOGÍA</a>
+        <a href="SOCIALES.html">SOCIALES</a>
+    </nav>
+
+    <div class="contenido">
+        <h1>Biología</h1>
+        <h2>Respuestas de la guía</h2>
+
+        <h2>Consulta del pH</h2>
+        <table border="1" cellpadding="8" cellspacing="0" style="margin:auto; width:100%; border-collapse:collapse; font-size:1.1em;">
+            <tr><th>Fluido corporal</th><th>Solicitud</th><th>Método</th><th>Rango de referencia</th><th>Nota clínica</th></tr>
+            <tr><td>Sangre arterial</td><td>pH arterial (gasometría)</td><td>Analizador de gases</td><td>7.35 – 7.45</td><td>Evalúa acidosis/alkalosis; revisar PaCO₂ y HCO₃⁻.</td></tr>
+            <tr><td>Sangre venosa</td><td>pH venoso</td><td>Gasómetro/laboratorio</td><td>7.31 – 7.41</td><td>Alternativa cuando no hay gasometría arterial.</td></tr>
+            <tr><td>Orina</td><td>pH urinario</td><td>Tiras o pH-metro</td><td>4.5 – 8.0</td><td>Útil en infecciones y cálculos.</td></tr>
+            <tr><td>Saliva</td><td>pH salival</td><td>Tiras o pH-metro</td><td>6.2 – 7.6</td><td>Variable por alimentos.</td></tr>
+            <tr><td>Sudor</td><td>pH del sudor</td><td>Tiras o pH-metro</td><td>4.5 – 7.0</td><td>Afectado por ejercicio e higiene.</td></tr>
+            <tr><td>Lágrimas</td><td>pH lagrimal</td><td>Tiras o laboratorio</td><td>7.0 – 7.4</td><td>Alterado en ojo seco.</td></tr>
+            <tr><td>LCR</td><td>pH del LCR</td><td>pH-metro</td><td>7.31 – 7.34</td><td>No es prueba rutinaria.</td></tr>
+            <tr><td>Contenido gástrico</td><td>pH gástrico</td><td>pH-papel o pH-metro</td><td>1.5 – 3.5</td><td>Evalúa secreción ácida.</td></tr>
+            <tr><td>Bilis</td><td>pH de bilis</td><td>pH-metro</td><td>7.6 – 8.8</td><td>Cambios indican infección.</td></tr>
+            <tr><td>Fluido vaginal</td><td>pH vaginal</td><td>Tira ginecológica</td><td>3.8 – 4.5</td><td>pH >4.5 sugiere vaginosis.</td></tr>
+            <tr><td>Líquido sinovial</td><td>pH sinovial</td><td>pH-metro</td><td>7.4 – 7.8</td><td>Bajo en infecciones.</td></tr>
+            <tr><td>Semen</td><td>pH seminal</td><td>pH-metro o tiras</td><td>7.2 – 8.0</td><td>Afecta fertilidad.</td></tr>
+            <tr><td>Esputo</td><td>pH de esputo</td><td>pH-metro</td><td>7.0 – 8.0</td><td>Poco uso clínico.</td></tr>
+            <tr><td>Líquido pleural</td><td>pH pleural</td><td>Gasómetro o pH-metro</td><td>7.60 – 7.64</td><td>pH <7.20 sugiere empiema.</td></tr>
+            <tr><td>Líquido peritoneal</td><td>pH de ascitis</td><td>pH-metro</td><td>≈7.4</td><td>Se analiza con proteínas y cultivo.</td></tr>
+        </table>
+
+        <p>
+            El pH o Potencial de Hidrógeno es un parámetro fundamental que influye directamente en los suelos y aguas de los ecosistemas,
+            regulando la disponibilidad de nutrientes, la actividad microbiana y la estabilidad química. En los suelos, un pH ácido aumenta
+            la solubilidad de metales tóxicos y reduce la disponibilidad de nutrientes esenciales, mientras que un pH alcalino limita
+            micronutrientes importantes para la productividad agrícola. En las aguas, el pH determina la calidad del hábitat acuático y la
+            toxicidad de metales, afectando la supervivencia de peces, algas e invertebrados.
+        </p>
+
+        <p>
+            La variabilidad climática a largo plazo también altera el pH de manera significativa. El aumento del CO₂ atmosférico acidifica
+            océanos y cuerpos de agua, mientras que las sequías y cambios en las lluvias modifican la alcalinidad y el balance químico del
+            suelo. Esto repercute en los sistemas biológicos, reduciendo la productividad agrícola, afectando la salud humana y generando
+            impactos económicos y sociales, especialmente en comunidades dependientes de los recursos naturales.
+        </p>
+
+        <p>
+            En las diferentes industrias, medir el pH es esencial para garantizar la eficiencia, seguridad y calidad de los procesos en
+            sectores como la industria alimentaria, farmacéutica, química, agrícola, cosmética, de tratamiento de aguas y energética. El
+            control del pH asegura productos inocuos, procesos estables, cumplimiento de normativas ambientales, prevención de corrosión,
+            optimización de reacciones químicas y protección de ecosistemas frente a vertimientos ácidos o alcalinos.
+        </p>
+
+    </div>
+
+</body>
+</html>
+

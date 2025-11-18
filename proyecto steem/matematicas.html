@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matemáticas</title>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Baloo+2:wght@400;600&display=swap" rel="stylesheet"/>
+
+<style>
+    /* Reset */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Baloo 2', cursive;
+        background: linear-gradient(135deg, #f5f9e9, #d4f0fc);
+        color: #1e3d3b;
+        line-height: 1.7;
+    }
+
+    /* NAVBAR */
+    nav {
+        background-color: #2c6e49;
+        text-align: center;
+        padding: 12px 0;
+        box-shadow: 0 4px 8px rgba(44,110,73,0.4);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 10px 18px;
+        font-family: 'Baloo 2', cursive;
+        background: #3d8b6c;
+        border-radius: 8px;
+        transition: 0.3s;
+        display: inline-block;
+        font-weight: 700;
+    }
+
+    nav a:hover {
+        background: #56a3a6;
+        transform: scale(1.1);
+    }
+
+    /* Contenido */
+    .contenido {
+        position: relative;
+        max-width: 900px;
+        margin: 50px auto 80px;
+        background-color: #ffffffd0;
+        padding: 40px 50px;
+        border-radius: 30px;
+        box-shadow: 0 10px 25px rgba(28, 103, 88, 0.3);
+        text-align: center;
+        transition: 0.4s;
+    }
+
+    .contenido:hover {
+        box-shadow: 0 15px 45px rgba(28,103,88,0.5);
+    }
+
+    /* Barras decorativas */
+    .contenido::before,
+    .contenido::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 14px;
+        height: 100%;
+        background: linear-gradient(180deg, #2c6e49, #56a3a6);
+        border-radius: 14px;
+        box-shadow: 0 0 15px rgba(44,110,73,0.4);
+    }
+
+    .contenido::before { left: -20px; }
+    .contenido::after { right: -20px; }
+
+    /* Títulos */
+    h1 {
+        font-family: 'Comic Neue', cursive;
+        font-size: 3rem;
+        color: #2b6e91;
+        text-shadow: 2px 2px #a7d7c5;
+    }
+
+    h2 {
+        font-family: 'Comic Neue', cursive;
+        font-size: 2.2rem;
+        color: #1c6758;
+        text-shadow: 1px 1px #a8e6cf;
+        margin-top: 40px;
+    }
+
+    h3 {
+        font-family: 'Comic Neue', cursive;
+        font-size: 1.8rem;
+        color: #145374;
+        text-shadow: 1px 1px #b0e8d6;
+    }
+
+    p {
+        font-size: 1.25em;
+        color: #2a4d44;
+    }
+
+    /* Listas */
+    ul {
+        list-style: none;
+        padding: 0;
+        max-width: 350px;
+        margin: 0 auto 30px;
+        text-align: left;
+    }
+
+    li {
+        padding: 10px 0;
+        border-bottom: 2px dashed #c9e7e4;
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #2d5f4a;
+        transition: 0.3s;
+    }
+
+    li:hover {
+        transform: scale(1.05);
+        color: #145374;
+    }
+
+    /* Imagen de ejemplo opcional (si agregas una gráfica) */
+    img {
+        max-width: 100%;
+        border-radius: 20px;
+        border: 5px solid #2c6e49;
+        margin: 25px auto;
+        display: block;
+        box-shadow: 0 10px 20px rgba(44,110,73,0.4);
+    }
+
+    /* Responsivo */
+    @media(max-width:600px) {
+        .contenido {
+            padding: 20px;
+            margin: 20px;
+        }
+        h1 { font-size: 2.4rem; }
+        h2 { font-size: 1.8rem; }
+    }
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="PRINCIPAL.html">PRINCIPAL</a>
+        <a href="INFORMATICA.html">INFORMÁTICA</a>
+        <a href="MATEMATICAS.html">MATEMÁTICAS</a>
+        <a href="ED-AMBIENTAL.html">ED. AMBIENTAL</a>
+        <a href="ED-FISICA.html">ED. FÍSICA</a>
+        <a href="INGLES.html">INGLÉS</a>
+        <a href="ESPAÑOL.html">ESPAÑOL</a>
+        <a href="BIOLOGIA.html">BIOLOGÍA</a>
+        <a href="SOCIALES.html">SOCIALES</a>
+</nav>
+
+<div class="contenido">
+
+    <h1>Matemáticas</h1>
+
+    <h2>Actividad</h2>
+    <p>En matemáticas analizamos una gráfica y respondimos unas preguntas de acuerdo a la gráfica.</p>
+
+    <h2>a. ¿Cuáles son las variables que aparecen en el eje X y en el eje Y de la gráfica?</h2>
+    <ul>
+        <li><strong>Eje X:</strong> Año (1650–2000).</li>
+        <li><strong>Eje Y:</strong> Precipitación de enero a junio, medida en milímetros (mm).</li>
+    </ul>
+
+    <h2>b. ¿En qué unidades están representadas estas variables?</h2>
+    <ul>
+        <li><strong>Eje X:</strong> No tiene unidades (variable temporal).</li>
+        <li><strong>Eje Y:</strong> Milímetros (mm).</li>
+    </ul>
+
+    <h2>c. Determina el Dominio y Rango</h2>
+    <ul>
+        <li><strong>Dominio:</strong> De 1650 a 2000 (años).</li>
+        <li><strong>Rango:</strong> Aproximadamente de 0 mm a 300 mm.</li>
+    </ul>
+
+    <h2>d. Tipo de función y análisis</h2>
+    <p>En la gráfica se observa una línea recta que representa una tendencia lineal o línea de regresión.</p>
+
+    <p><strong>Tipo de función:</strong> Función lineal de la forma:</p>
+    <p><strong>f(x) = mx + b</strong></p>
+    <p>(La gráfica no permite calcular exactamente m y b.)</p>
+
+    <p><strong>¿Qué representa esta recta?</strong></p>
+    <ul>
+        <li>Muestra la tendencia general de la precipitación a lo largo de más de 300 años.</li>
+        <li>La recta es casi horizontal, lo que indica estabilidad en el promedio.</li>
+        <li>Las variaciones suben y bajan, pero el promedio se mantiene constante.</li>
+    </ul>
+
+    <h2>e. Años donde se presentan sequías e inundaciones</h2>
+
+    <h3>• Sequías</h3>
+    <p>Valores muy bajos (&lt; 50 mm). Posibles años:</p>
+    <ul>
+        <li>1685</li>
+        <li>1720</li>
+        <li>1770</li>
+        <li>1810</li>
+        <li>1855</li>
+        <li>1900</li>
+        <li>1950</li>
+    </ul>
+
+    <h3>• Inundaciones</h3>
+    <p>Valores altos (&gt; 200 mm). Posibles años:</p>
+    <ul>
+        <li>1710</li>
+        <li>1740</li>
+        <li>1790</li>
+        <li>1875</li>
+        <li>1920</li>
+        <li>1985</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
